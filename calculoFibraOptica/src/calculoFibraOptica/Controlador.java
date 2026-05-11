@@ -129,12 +129,8 @@ public class Controlador {
 
 		// generar grafo completo
 		Grafo grafo = GeneradorGrafo.generarGrafo(localidades,costoKm,porcentaje,costoFijo);
-//		Kruskal kruskal = new Kruskal(); // KRUSKAL
-//		Grafo arbol = kruskal.obtenerAGM(grafo); // AGM
-//		
-		Prim prim = new Prim(); 
-		Grafo arbol = prim.obtenerAGM(grafo);
-//		
+		Kruskal kruskal = new Kruskal(); // KRUSKAL
+		Grafo arbol = kruskal.obtenerAGM(grafo); // AGM
 		ArrayList<Arista> conexiones = arbol.obtenerAristas(); // conexiones del AGM
 		double costoTotal = 0;
 		for (Arista a : conexiones) {
