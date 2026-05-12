@@ -1,4 +1,4 @@
-package calculoFibraOptica;
+package negocio;
 
 public class CalculoDistancia {
 	private static final double radioDeLaTierra = 6371.0;
@@ -22,12 +22,10 @@ public class CalculoDistancia {
 
 		double costo = distancia * costoPorKm;
 
-	    // Se incrementa si supera 300km
 	    if (distancia > 300) {
 	        costo += costo * (porcentajeAumento / 100);
 	    }
 
-	    // Si es provincia su costo es fijo
 	    if (!l1.getProvincia().equalsIgnoreCase(l2.getProvincia())) {
 	        costo += costoFijoProvincias;
 	    }

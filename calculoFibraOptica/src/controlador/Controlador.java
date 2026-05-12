@@ -1,12 +1,26 @@
-package calculoFibraOptica;
+package controlador;
 
-import javax.swing.*;
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-//Aca se uso el tipo de archivo csv 
+import javax.swing.JOptionPane;
+
+import negocio.Arista;
+import negocio.DatosIngresadosPorElCliente;
+import negocio.GeneradorGrafo;
+import negocio.Grafo;
+import negocio.Kruskal;
+import negocio.Localidad;
+import vista.VentanaClientes;
+import vista.VentanaMapa;
+import vista.VentanaPrincipal;
+
 public class Controlador {
 	private static final String archivo_CSV = "clientes.csv";
 	private static final String separador = ",";

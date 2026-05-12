@@ -1,13 +1,17 @@
-package calculoFibraOptica;
+package vista;
 import java.awt.BorderLayout;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import org.openstreetmap.gui.jmapviewer.JMapViewer;
 import javax.swing.JFrame;
-import org.openstreetmap.gui.jmapviewer.MapMarkerDot;
+
 import org.openstreetmap.gui.jmapviewer.Coordinate;
+import org.openstreetmap.gui.jmapviewer.JMapViewer;
+import org.openstreetmap.gui.jmapviewer.MapMarkerDot;
 import org.openstreetmap.gui.jmapviewer.MapPolygonImpl;
+
+import negocio.Arista;
+import negocio.Localidad;
 
 public class VentanaMapa extends JFrame {
 	private JMapViewer mapa;

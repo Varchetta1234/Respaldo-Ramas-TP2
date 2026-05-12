@@ -1,4 +1,4 @@
-package calculoFibraOptica;
+package negocio;
 import java.util.ArrayList;
 
 public class Kruskal {
@@ -6,10 +6,10 @@ public class Kruskal {
 	
 	public Grafo obtenerAGM(Grafo grafo) {
 		int n = grafo.cantidadVertices();
-		// estructura Union-Find
-        A = new int[n];
-        // cada vértice comienza siendo su propia raíz
-        for (int i = 0; i < n; i++) {
+
+		A = new int[n];
+
+		for (int i = 0; i < n; i++) {
             A[i] = i; 
         }
         
@@ -22,12 +22,12 @@ public class Kruskal {
         // E
         ArrayList<Arista> aristas = grafo.obtenerAristas();
 
-        // ordenar por costo mínimo
+        
         ArrayList<Arista> usadas = new ArrayList<>();
         
         // mientras i ≤ n − 1
         while (ET.size() < n - 1) {
-        	// elegir e ∈ E tal que l(e) sea mínima
+        	
         	Arista e = obtenerMenorArista(aristas, usadas);
         	usadas.add(e);
         	
@@ -36,7 +36,7 @@ public class Kruskal {
             
             // que no formen circuito
             if (!find(origen, destino)) {
-                // ET := ET ∪ {e}
+                
                 arbol.agregarArista(origen, destino, e.getCosto());
                 ET.add(e);
                 // unir componentes

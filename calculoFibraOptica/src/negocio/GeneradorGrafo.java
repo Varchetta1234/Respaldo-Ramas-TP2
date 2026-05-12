@@ -1,4 +1,4 @@
-package calculoFibraOptica;
+package negocio;
 
 import java.util.ArrayList;
 

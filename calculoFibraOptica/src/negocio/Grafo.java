@@ -1,11 +1,10 @@
-package calculoFibraOptica;
+package negocio;
 
 import java.util.ArrayList;
 
 public class Grafo {
-	private double [][] A;	// representamos el grafo por su matriz de adyacencia
+	private double [][] A;	
 	
-	// la cantidad de vertices esta predeterminada desde el constructor
 	public Grafo(int cantidadVertices) {
 		A = new double [cantidadVertices][cantidadVertices];
 		
@@ -33,17 +32,15 @@ public class Grafo {
 		A[j][i] = costo;
 	}
 	
-	// Informa si existe la arista especificada
+	
 	public boolean existeArista(int i, int j) {
 		return A[i][j] != -1; // no existe conexio va a ser igual a -1
 	}
 	
-	// Obtengo el costo
 	public double obtenerCosto(int i, int j) {
         return A[i][j];
     }
 	
-	// Cantidad total de vertices
 	public int cantidadVertices() {
         return A.length;
     }

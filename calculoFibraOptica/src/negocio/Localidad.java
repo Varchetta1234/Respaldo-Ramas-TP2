@@ -1,4 +1,4 @@
-package calculoFibraOptica;
+package negocio;
 
 public class Localidad {
 	private String nombre;

@@ -1,8 +1,15 @@
-package calculoFibraOptica;
+package test;
 
-import static org.junit.Assert.*;
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import java.util.ArrayList;
+
+import org.junit.Test;
+
+import negocio.GeneradorGrafo;
+import negocio.Grafo;
+import negocio.Localidad;
 
 public class GeneradorGrafoTest {
 

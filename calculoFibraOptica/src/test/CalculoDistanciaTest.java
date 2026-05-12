@@ -1,7 +1,11 @@
-package calculoFibraOptica;
+package test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
+
+import negocio.CalculoDistancia;
+import negocio.Localidad;
 
 public class CalculoDistanciaTest {
 
